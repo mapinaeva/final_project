@@ -1,0 +1,27 @@
+{% extends 'questionary.html' %}
+{% block content %}
+<div class="col-md-12" style="margin-left: 5%; margin-right: 5%; margin-top: 5%;">
+
+<table class="table table-hover table-responsive table-sm" style="margin-bottom: 10px">
+    <thead>
+    <tr>
+        <th style="background-color: darkgray;">{{ names[0] }}</th>
+        {% for el in answers_cols[0] %}
+        <th style="background-color: darkgray;"> {{ el }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in range(1, len1) %}
+    <tr>
+        <th style="background-color: darkgray;">{{ names[i] }}</th>
+        {% for el in answers_cols[i] %}
+        <th> {{ el }}</th>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</div>
+{% endblock %}
